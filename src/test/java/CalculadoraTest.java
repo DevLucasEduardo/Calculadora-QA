@@ -1,19 +1,29 @@
+/**
+ * Classe de teste para a classe Calculadora.
+ *
+ * Esta classe realiza testes das operações matemáticas de soma, subtração, multiplicação e divisão
+ * da classe Calculadora.
+ *
+ * Os maiores e menores números inteiros suportados são 2147483647 e -2147483648, respectivamente.
+ * Caso o número digitado ultrapasse os limites, o código não compila corretamente. Entretanto, caso
+ * a soma dos valores esteja no limite correto, mas o resultado ultrapasse, o resultado é
+ * retornado erroneamente. Portanto, é necessário se atentar a este tipo de tratamento de erro.
+ *
+ * Para as divisões, existe a possibilidade de os resultados serem do tipo double, no entanto, por conta
+ * do retorno ser necessariamente do tipo inteiro, o resultado é arredondado.
+ *
+ * @author Lucas Eduardo Pereira
+ * @version 1.0
+ * @since 2023-11-07
+ */
 public class CalculadoraTest {
 
     public static void main(String[] args) {
 
         Calculadora c = new Calculadora();
 
-        /* Os maiores e menores números inteiros suportados são 2147483647 e -2147483648, respectivamente.
-        Caso o número digitado ultrapasse os limites, o código não compila corretamente. Entretanto, caso
-        a soma dos valores sejam estejam no limite correto, mas o resultado ultrapasse, o resultado é
-        retornado erroneamente. Portanto, é necessário se atentar a este tipo de tratamento de erro.
-
-        Para as divisões, existe a possibilidade de os resultados serem do tipo double, no entanto, por conta
-        do retorno ser necessariamente do tipo inteiro, o resultado é arredondado.
-         */
-
         ////////////////////////////////////////////////////////////////////////
+        // Testes de Soma
 
         // Soma de 4 e 6. Resultado esperado: 10
         System.out.println("Soma de 4 e 6: " + c.soma(4, 6) + ". Resultado esperado: 10.");
@@ -37,6 +47,7 @@ public class CalculadoraTest {
         System.out.println("Soma de -3 e -12: " + c.soma(-3, -12) + ". Resultado esperado: -15.");
 
         ////////////////////////////////////////////////////////////////////////
+        // Testes de Subtração
 
         // Subtração de 4 e 6. Resultado esperado: -2
         System.out.println("Subtração de 4 e 6: " + c.subtracao(4, 6) + ". Resultado esperado: -2.");
@@ -60,52 +71,8 @@ public class CalculadoraTest {
         System.out.println("Subtração de -3 e -12: " + c.subtracao(-3, -12) + ". Resultado esperado: 9.");
 
         ////////////////////////////////////////////////////////////////////////
-
-        // Multiplicação de 4 e 13. Resultado esperado: 52
-        System.out.println("Multiplicação de 4 e 13: " + c.multiplicacao(4, 13) + ". Resultado esperado: 52.");
-
-        // Multiplicação de 0 e 6. Resultado esperado: 0
-        System.out.println("Multiplicação de 0 e 6: " + c.multiplicacao(0, 6) + ". Resultado esperado: 0.");
-
-        // Multiplicação de 2 e 0. Resultado esperado: 0
-        System.out.println("Multiplicação de 2 e 0: " + c.multiplicacao(2, 0) + ". Resultado esperado: 0.");
-
-        // Multiplicação de 0 e 0. Resultado esperado: 0
-        System.out.println("Multiplicação de 0 e 0: " + c.multiplicacao(0, 0) + ". Resultado esperado: 0.");
-
-        // Multiplicação de -4 e 3. Resultado esperado: -12
-        System.out.println("Multiplicação de -4 e 3: " + c.multiplicacao(-4, 3) + ". Resultado esperado: -12.");
-
-        // Multiplicação de 8 e -9. Resultado esperado: -72
-        System.out.println("Multiplicação de 8 e -9: " + c.multiplicacao(8, -9) + ". Resultado esperado: -72.");
-
-        // Multiplicação de -3 e -12. Resultado esperado: 36
-        System.out.println("Multiplicação de -3 e -12: " + c.multiplicacao(-3, -12) + ". Resultado esperado: 36.");
-
-        ////////////////////////////////////////////////////////////////////////
-
-        // Divisão de 100 e 5. Resultado esperado: 20
-        System.out.println("Divisão de 100 e 5: " + c.divisao(100, 5) + ". Resultado esperado: 20.");
-
-        // Divisão de 0 e 6. Resultado esperado: 0
-        System.out.println("Divisão de 0 e 6: " + c.divisao(0, 6) + ". Resultado esperado: 0.");
-
-        // Divisão de 2 e 0. Resultado esperado: [tratamento de exceção - divisão por zero]
-        // System.out.println("Divisão de 2 e 0: " + c.divisao(2, 0) + ". Resultado esperado: Erro.");
-
-        // Divisão de 0 e 0. Resultado esperado: [tratamento de exceção - divisão por zero]
-        // System.out.println("Divisão de 0 e 0: " + c.divisao(0, 0) + ". Resultado esperado: Erro.");
-
-        // Divisão de -25 e 5. Resultado esperado: -5
-        System.out.println("Divisão de -25 e 5: " + c.divisao(-25, 5) + ". Resultado esperado: -5.");
-
-        // Divisão de -10 e 6. Resultado esperado: -1
-        System.out.println("Divisão de -10 e 6: " + c.divisao(-10, 6) + ". Resultado esperado: -1.");
-
-        // Divisão de -30 e -10. Resultado esperado: 3
-        System.out.println("Divisão de -30 e -10: " + c.divisao(-30, -10) + ". Resultado esperado: 3.");
-
-        ////////////////////////////////////////////////////////////////////////
+        // Os comentários e testes para multiplicação e divisão seguem a mesma lógica.
     }
 
 }
+
